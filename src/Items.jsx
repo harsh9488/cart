@@ -17,6 +17,7 @@ const Items = () => {
 
   return (
     <div>
+      {/* Items */}
       <h1>Items</h1>
       <button onClick={() => addhandelbtn({ name: "Veg", price: 20 })}>
         Add Veg
@@ -25,6 +26,7 @@ const Items = () => {
         Add Fruits
       </button>
 
+      {/* Items In the cart */}
       <h1>Items In cart</h1>
       {cartItem.map((val, i) => (
         <Cart key={i} items={val} onRemove={removeItemsFromCart} />
