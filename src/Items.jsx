@@ -11,9 +11,9 @@ const Items = () => {
   const removeItemsFromCart = (itemToBeremove) => {
     const updateCart = cartItem.filter((val) => val !== itemToBeremove);
     setCartItem(updateCart);
-    };
-    
-    const total=cartItem.reduce((acc,val)=>acc+val.price,0)
+  };
+
+  const total = cartItem.reduce((acc, val) => acc + val.price, 0);
 
   return (
     <div>
@@ -31,7 +31,7 @@ const Items = () => {
       {cartItem.map((val, i) => (
         <Cart key={i} items={val} onRemove={removeItemsFromCart} />
       ))}
-          <h1>Total:{ total}</h1>
+      <h1>Total:{total}</h1>
     </div>
   );
 };
